@@ -1,24 +1,20 @@
-name: firebase
-version: master
-summary: These are the Firebase Command Line Interface (CLI) Tools.
+name: diagram
+version: git
+summary: CLI tool to generate hand written diagrams from ASCII arts.
 description: |
-  These tools can be used to :  
-  - Deploy code and assets to your Firebase projects
-  - Run a local web server for your Firebase Hosting site
-  - Interact with data in your Firebase database
-  - Import/Export users into/from Firebase Auth
-
+  It's a full featured CLI application which converts
+  the ASCII text into handwritten drawings. 
 
 grade: devel
 confinement: devmode
 
-apps:
-  firebase: 
-    command: firebase
-    plugs:
-      - network
-
 parts:
-  firebase:
-    plugin: nodejs
-    node-packages: [firebase-tools]
+  diagram:
+    source: .
+    plugin: go
+    go-packages: 
+      - github.com/esimov/diagram
+
+apps:
+  diagram: 
+    command: diagram
