@@ -14,7 +14,7 @@ distributions.</p>
 
 ## Install
 
-    sudo snap install diagram --edge
+    sudo snap install diagram --edge --devmode
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
